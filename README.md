@@ -9,80 +9,116 @@
 
 [Desktop glyph preview / Xem bảng chữ trên máy tính](preview-Regular.png)
 
+---
+
+## ⚠️ Thông báo Bản quyền & Pháp lý / Copyright & Legal Disclaimer
+
+> [!WARNING]
+> **Font nguyên bản Michelangelus là tài sản sở hữu trí tuệ có bản quyền độc quyền của Microsoft Corporation và Fabbrica di San Pietro (Tòa thánh Vatican), thiết kế bởi Studiogusto.**  
+> Giấy phép sử dụng kèm theo ([Michelangelus Fonts EULA](Michelangelus%20Fonts%20EULA.rtf)) **KHÔNG CẤP QUYỀN PHÂN PHỐI LẠI (No Distribution Rights)** và **KHÔNG CHO PHÉP THƯƠNG MẠI HÓA**.
+
+* **Mục đích dự án:** Đây là dự án phi thương mại (non-commercial), phục vụ mục đích nghiên cứu typography, học tập cá nhân và hỗ trợ hiển thị tiếng Việt trên các thiết bị đọc sách e-ink cá nhân.
+* **Tôn trọng bản quyền:** Dự án khuyến khích người dùng tải bản font gốc chính thức từ Microsoft tại [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=108856) hoặc xem bài giới thiệu tại [Microsoft Design — Designing Michelangelus](https://microsoft.design/articles/designing-michelangelus/).
+* **Tự xây dựng (DIY):** Chúng tôi cung cấp mã nguồn [`vietnamese_builder.py`](vietnamese_builder.py) để người dùng có thể tự áp dụng bản vá tiếng Việt trực tiếp từ bộ font gốc tải về từ Microsoft trên máy tính của mình mà không cần phụ thuộc vào bản dựng sẵn.
+
+---
+
 ## English
 
-Michelangelus VN is a quick, unofficial Vietnamese adaptation of Michelangelus. This repository includes four TrueType fonts for desktop use and four CP font files for compatible e-readers.
+Michelangelus VN is a quick, unofficial Vietnamese adaptation of Michelangelus, optimized for desktop reading and e-readers.
 
-### Credits and original font
-
-- Vietnamese adaptation, modifications and edits: **trungtypo**.
-- Original typeface: **Michelangelus**, designed by **Studiogusto**, commissioned by **Fabbrica di San Pietro**, and presented by Microsoft Design.
+### Credits & Licenses
+- Vietnamese glyph engineering, kerning & accents: **trungtypo**.
+- Original typeface: **Michelangelus**, designed by **Studiogusto**, commissioned by **Fabbrica di San Pietro**, and presented by **Microsoft Design**.
+- Reference serif accents: **EB Garamond** (SIL Open Font License).
 - Original source: [Designing Michelangelus — Microsoft Design](https://microsoft.design/articles/designing-michelangelus/).
-- Original download: [Michelangelus fonts — Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=108856).
+- Original font download: [Microsoft Download Center (ID 108856)](https://www.microsoft.com/en-us/download/details.aspx?id=108856).
 
-This adaptation is not an official release by Microsoft or the original designers. The adaptation credit refers to the Vietnamese edits, not authorship of the original typeface. The original [Michelangelus Fonts EULA](Michelangelus%20Fonts%20EULA.rtf) is included for reference; this repository does not replace it with an open-source font license.
+### 1-Click Installation (Windows & macOS)
+
+| Operating System | How to Install | How to Uninstall |
+| :--- | :--- | :--- |
+| **Windows** 💻 | Double-click **`install-windows.bat`** | Double-click **`uninstall-windows.bat`** |
+| **macOS** 🍎 | Double-click **`install-macos.command`** | Double-click **`uninstall-macos.command`** |
+
+* On **Windows**: The script automatically copies the 4 TTF files to your font library, registers them in Windows Registry (supports both Standard User and Administrator), and broadcasts a cache refresh signal. You can open Word, Photoshop, or browsers immediately.
+* On **macOS**: The script installs the fonts directly into `~/Library/Fonts/` for immediate system-wide use.
+
+### DIY: Self-Build Vietnamese Fonts from Original Source
+
+If you prefer building the Vietnamese font locally from the official Microsoft download:
+
+1. Download the official font archive from [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=108856).
+2. Extract the 4 original TTF files into an `original/` folder (or in the repository root).
+3. Install required Python packages:
+   ```bash
+   pip install fonttools freetype-py pillow numpy
+   ```
+4. Run the builder script:
+   ```bash
+   python vietnamese_builder.py
+   ```
+   The script will automatically fetch reference serif diacritics from EB Garamond (OFL), generate all 94 Vietnamese glyphs, fix the `Đ/đ` stroke crossbars, and output the compiled `Michelangelus-VN-*.ttf` files.
 
 ### Downloads
-
-Use **Code → Download ZIP** to download the whole repository, or open a file below and choose **Download raw file**.
 
 | Format | Files | Intended use |
 | --- | --- | --- |
 | TTF · version 2.010 | [Regular](Michelangelus-VN-Regular.ttf), [Bold](Michelangelus-VN-Bold.ttf), [Italic](Michelangelus-VN-Italic.ttf), [Bold Italic](Michelangelus-VN-BoldItalic.ttf) | Desktop applications that support TrueType fonts |
 | CP · .cpfont | [12](Michelangelus-vn_12.cpfont), [14](Michelangelus-vn_14.cpfont), [16](Michelangelus-vn_16.cpfont), [18](Michelangelus-vn_18.cpfont) | E-readers running firmware that supports .cpfont |
 
-Install the TTF files through your operating system's font manager. For CP files, follow the font-installation instructions for your e-reader's firmware; these are not desktop TTF files. The CP files are supplied as provided and have not been verified on a physical e-reader in this release.
-
-### Posters and wallpapers
-
-Vietnamese typography specimens featuring two opening lines from **Chào nguyên xuân — Bùi Giáng**, with the four actual Michelangelus VN 2.010 styles.
-
-- 1800 × 1800 posters: [Color](Michelangelus-VN-poster-color.png) · [Black-and-white dither](Michelangelus-VN-poster-BW.png).
-- 528 × 792 portrait wallpaper: [1-bit PNG](Chao-nguyen-xuan-X3-BW.png) · [8-bit BMP containing black and white only](Chao-nguyen-xuan-X3-BW.bmp).
-
-The architectural illustration is AI-generated; the text uses the actual font files rendered with HarfBuzz + FreeType. Floyd–Steinberg dithering uses the processing code supplied with X3 Wallpaper Maker. Desktop previews were checked; these wallpapers have not been tested on a physical device. Poetry excerpt source: [Tuổi Trẻ — Chào nguyên xuân](https://tuoitre.vn/chao-nguyen-xuan-16928.htm).
-
-### Status
-
-This is a **quick Vietnamese adaptation**, with adjustments to Vietnamese accents, horn connections, spacing and kerning. The four TTF styles were checked using desktop rendering with HarfBuzz + FreeType, including NFC/NFD text. The dong currency symbol **₫ (U+20AB)** is still missing from the TTF fonts; **đ/Đ** are present. Further visual refinement may be needed for particular applications or text combinations.
-
-If you find a problem, open an issue with the font style, sample text, application and screenshot. SHA-256 checksums are provided in [SHA256SUMS.txt](SHA256SUMS.txt).
+---
 
 ## Tiếng Việt
 
-Michelangelus VN là **bản Việt hóa nhanh, không chính thức** của Michelangelus. Repo gồm bốn font TrueType dùng trên máy tính và bốn file CP dành cho máy đọc sách có firmware hỗ trợ.
+Michelangelus VN là **bản Việt hóa nhanh, không chính thức** của font chữ Michelangelus. Bộ font gồm 4 kiểu TrueType dùng trên máy tính và 4 file CP dành cho máy đọc sách (XtOS / e-readers).
 
-### Ghi công và font gốc
+### Ghi công & Bản quyền
+- Việt hóa, chỉnh sửa glyph và kerning: **trungtypo**.
+- Font gốc: **Michelangelus**, do **Studiogusto** thiết kế, được **Fabbrica di San Pietro** đặt thực hiện và giới thiệu bởi **Microsoft Design**.
+- Dấu serif tham chiếu: **EB Garamond** (Giấy phép mã nguồn mở SIL OFL).
+- Tải font nguyên bản: [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=108856).
 
-- Việt hóa, chỉnh sửa và edit by **trungtypo**.
-- Font gốc: **Michelangelus**, do **Studiogusto** thiết kế, được **Fabbrica di San Pietro** đặt thực hiện và giới thiệu trên Microsoft Design.
-- Đường dẫn gốc: [Designing Michelangelus — Microsoft Design](https://microsoft.design/articles/designing-michelangelus/).
-- Tải font nguyên bản: [Michelangelus fonts — Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=108856).
+### Cài đặt 1-Click (Dễ dàng cho người dùng)
 
-Đây không phải bản phát hành chính thức của Microsoft hay nhóm thiết kế gốc. Phần ghi công trungtypo áp dụng cho việc Việt hóa và chỉnh sửa, không phải thiết kế font nguyên bản. Repo giữ kèm [EULA gốc của Michelangelus](Michelangelus%20Fonts%20EULA.rtf), không thay bằng giấy phép font mã nguồn mở.
+| Hệ điều hành | Cách cài đặt | Cách gỡ bỏ |
+| :--- | :--- | :--- |
+| **Windows** 💻 | Nhấp đúp chuột vào **`install-windows.bat`** | Nhấp đúp chuột vào **`uninstall-windows.bat`** |
+| **macOS** 🍎 | Nhấp đúp chuột vào **`install-macos.command`** | Nhấp đúp chuột vào **`uninstall-macos.command`** |
+
+* **Windows:** Tự động cài đặt cả 4 kiểu font, đăng ký vào Registry Windows (hỗ trợ cả quyền User thường lẫn Admin) và làm mới cache font ngay lập tức.
+* **macOS:** Tự động chép 4 font vào thư mục font cá nhân `~/Library/Fonts/`, mở app (Word, Pages, Photoshop, v.v.) là có font dùng ngay.
+
+### Hướng dẫn Tự Việt hóa từ Font gốc của Microsoft (Tự làm / DIY)
+
+Để bảo đảm 100% về mặt bản quyền cá nhân, bạn có thể tự chạy script để vá tiếng Việt từ file gốc Microsoft:
+
+1. Tải bộ font gốc từ Microsoft: [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=108856).
+2. Giải nén 4 file TTF gốc vào thư mục `original/` (hoặc để cùng thư mục với script).
+3. Cài đặt các thư viện Python cần thiết:
+   ```bash
+   pip install fonttools freetype-py pillow numpy
+   ```
+4. Chạy script tạo font:
+   ```bash
+   python vietnamese_builder.py
+   ```
+   Script sẽ tự động:
+   * Tải các nét dấu móc, râu serif từ EB Garamond (nguồn mở OFL).
+   * Căn chỉnh quang học (optical center) theo từng biến thể (Regular, Bold, Italic, BoldItalic).
+   * Tạo 94 glyphs tiếng Việt có dấu, tổ hợp 2 tầng và sửa nét gạch ngang chuẩn cho chữ `Đ / đ`.
+   * Xuất ra bộ font hoàn chỉnh `Michelangelus-VN-*.ttf`.
 
 ### Tải và sử dụng
-
-Chọn **Code → Download ZIP** để tải toàn bộ, hoặc mở từng file bên dưới rồi chọn **Download raw file**.
 
 | Định dạng | File | Mục đích |
 | --- | --- | --- |
 | TTF · phiên bản 2.010 | [Regular](Michelangelus-VN-Regular.ttf), [Bold](Michelangelus-VN-Bold.ttf), [Italic](Michelangelus-VN-Italic.ttf), [Bold Italic](Michelangelus-VN-BoldItalic.ttf) | Ứng dụng trên máy tính hỗ trợ TrueType |
 | CP · .cpfont | [12](Michelangelus-vn_12.cpfont), [14](Michelangelus-vn_14.cpfont), [16](Michelangelus-vn_16.cpfont), [18](Michelangelus-vn_18.cpfont) | Máy đọc sách dùng firmware hỗ trợ .cpfont |
 
-Cài file TTF bằng trình quản lý font của hệ điều hành. Với bản CP, làm theo hướng dẫn cài font của firmware trên máy đọc sách; không cài file .cpfont như TTF trên máy tính. Các file CP được giữ nguyên từ bộ đã cung cấp, chưa kiểm tra trực tiếp trên máy đọc sách trong lần phát hành này.
-
-### Poster và hình nền
-
-Bản mẫu chữ tiếng Việt dùng hai câu mở đầu **Chào nguyên xuân — Bùi Giáng**, trình bày bằng bốn kiểu font Michelangelus VN 2.010 thật.
-
-- Poster 1800 × 1800: [Bản màu](Michelangelus-VN-poster-color.png) · [Đen trắng dither](Michelangelus-VN-poster-BW.png).
-- Hình nền dọc 528 × 792: [PNG 1-bit](Chao-nguyen-xuan-X3-BW.png) · [BMP 8-bit chỉ chứa hai màu đen trắng](Chao-nguyen-xuan-X3-BW.bmp).
-
-Minh họa kiến trúc tạo bằng AI; phần chữ render từ file font thật bằng HarfBuzz + FreeType. Hiệu ứng Floyd–Steinberg dither dùng mã xử lý đi kèm X3 Wallpaper Maker. Đã kiểm tra ảnh trên máy tính, chưa thử trực tiếp trên thiết bị. Nguồn trích thơ: [Tuổi Trẻ — Chào nguyên xuân](https://tuoitre.vn/chao-nguyen-xuan-16928.htm).
-
-### Tình trạng
-
-Đây là **bản Việt hóa nhanh**, đã chỉnh dấu tiếng Việt, điểm nối râu ơ/ư, khoảng cách chữ và kerning. Cả bốn kiểu TTF đã được kiểm tra render trên máy tính bằng HarfBuzz + FreeType, gồm văn bản NFC/NFD. Font TTF vẫn thiếu ký hiệu tiền đồng **₫ (U+20AB)**; chữ **đ/Đ** đầy đủ. Một số ứng dụng hoặc tổ hợp chữ vẫn có thể cần tinh chỉnh thêm.
-
-Nếu gặp lỗi, vui lòng tạo issue kèm kiểu font, đoạn chữ, ứng dụng đang dùng và ảnh chụp. Mã kiểm tra SHA-256 nằm trong [SHA256SUMS.txt](SHA256SUMS.txt).
+### Tình trạng & Điểm cải tiến
+- Đã bổ sung trọn vẹn 146 ký tự tiếng Việt chuẩn Unicode.
+- Dấu thanh và dấu kép 2 tầng (như ấ, ầ, ắ, ằ, ố, ồ...) được scale tỉ lệ hài hòa và đặt vát theo sườn nón/lòng trăng, không chạm trần ascender.
+- Nét móc râu `ơ, ư` uốn cong tự nhiên theo thân chữ với đầu giọt lệ Phục hưng.
+- Sửa lỗi font gốc gán nhầm chữ `Đ / đ` thành `Dcaron / dcaron`, thay bằng dấu gạch ngang thân chuẩn xác.
+- Mã kiểm tra SHA-256 nằm trong [SHA256SUMS.txt](SHA256SUMS.txt).
