@@ -98,6 +98,11 @@ if ($installed -eq $fonts.Count) {
     Write-Host "[HOÀN TẤT] Đã cài đặt $installed font vào hệ thống." -ForegroundColor Yellow
 } else {
     Write-Host "[NHẮC NHỞ] Chưa tìm thấy các file font Michelangelus-VN-*.ttf." -ForegroundColor Red
-    Write-Host "Vui lòng chạy 'python vietnamese_builder.py' trước để tạo bộ font từ nguồn gốc Microsoft." -ForegroundColor Yellow
-    Write-Host "Xem chi tiết hướng dẫn tại README.md" -ForegroundColor Cyan
+    Write-Host "👉 Bạn có thể tải trọn bộ font đã dựng sẵn tại Google Drive:" -ForegroundColor Yellow
+    Write-Host "   https://drive.google.com/drive/folders/1hE8nc5wfGN0kCS44mlHzgg6-QP9CjUdz?usp=sharing" -ForegroundColor Cyan
+    Write-Host ""
+    $openDrive = Read-Host "Bạn có muốn mở link Google Drive trên trình duyệt ngay bây giờ không? (Y/N)"
+    if ($openDrive -match '^[Yy]') {
+        Start-Process "https://drive.google.com/drive/folders/1hE8nc5wfGN0kCS44mlHzgg6-QP9CjUdz?usp=sharing"
+    }
 }

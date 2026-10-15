@@ -50,8 +50,13 @@ elif [ $COUNT -gt 0 ]; then
   echo "⚠️ Đã cài đặt $COUNT/4 font vào $TARGET_DIR."
 else
   echo "❌ [NHẮC NHỞ] Không tìm thấy các file font Michelangelus-VN-*.ttf nào trong thư mục này."
-  echo "👉 Vui lòng chạy 'python vietnamese_builder.py' trước để tạo bộ font từ nguồn gốc Microsoft."
-  echo "   Xem chi tiết hướng dẫn tại README.md"
+  echo "👉 Bạn có thể tải trọn bộ font đã dựng sẵn tại Google Drive:"
+  echo "   https://drive.google.com/drive/folders/1hE8nc5wfGN0kCS44mlHzgg6-QP9CjUdz?usp=sharing"
+  echo ""
+  read -p "Bạn có muốn mở link Google Drive trên trình duyệt để tải không? (y/n): " OPEN_DRIVE
+  if [[ "$OPEN_DRIVE" =~ ^[Yy] ]]; then
+    open "https://drive.google.com/drive/folders/1hE8nc5wfGN0kCS44mlHzgg6-QP9CjUdz?usp=sharing"
+  fi
 fi
 
 echo ""
