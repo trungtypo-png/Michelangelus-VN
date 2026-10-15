@@ -5,6 +5,8 @@
 
 *Việt hóa, tinh chỉnh glyph và đóng gói bởi **trungtypo**.*
 
+[![Support on Ko-fi](https://img.shields.io/badge/Ko--fi-trungtypo-ff5e5b?style=flat&logo=kofi&logoColor=white)](https://ko-fi.com/trungtypo)
+
 [Tiếng Việt](#tiếng-việt) · [English](#english)
 
 ---
@@ -169,6 +171,25 @@ Choose either of the two methods below:
 - **Kindle, Kobo, Boox, etc.**: Copy the `Michelangelus-VN-*.ttf` files directly into your e-reader's `fonts` folder.
 - **XtOS (xteink devices)**: Use the `.cpfont` files provided in the [Google Drive Folder](https://drive.google.com/drive/folders/1hE8nc5wfGN0kCS44mlHzgg6-QP9CjUdz?usp=sharing).
 - **Included artwork**: High-contrast, 16-level grayscale lockscreen wallpapers are available in `assets/`: [`assets/Chao-nguyen-xuan-X3-BW.png`](assets/Chao-nguyen-xuan-X3-BW.png) and [`assets/Chao-nguyen-xuan-X3-BW.bmp`](assets/Chao-nguyen-xuan-X3-BW.bmp).
+
+---
+
+## ☕ Ủng hộ tác giả / Sponsor
+
+Nếu bạn yêu thích font chữ Michelangelus VN và muốn ủng hộ các dự án typography tiếp theo:
+
+<a href="https://ko-fi.com/trungtypo" target="_blank"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Buy Me a Coffee at ko-fi.com" height="34"></a>
+
+<details>
+<summary>☕ <b>Ủng hộ qua Vietcombank (VietQR)</b></summary>
+<br>
+
+<img src="assets/vietqr.png" alt="Vietcombank QR" width="220" />
+
+- **Chủ tài khoản:** DINH TOAN TRUNG
+- **Số tài khoản:** `9346829005`
+- **Ngân hàng:** Vietcombank (VCB)
+</details>
 
 ---
 
