@@ -17,7 +17,6 @@
 
 > [!TIP]
 > ### 📥 Tải nhanh bộ font dựng sẵn (Dành cho người dùng phổ thông) / Quick Download
-> Nếu bạn chỉ muốn tải font về để dùng ngay trên máy tính hoặc máy đọc sách mà **không cần cài Python hay gõ lệnh**:
 > - 👉 **[Bấm vào đây để tải trọn bộ từ Google Drive](https://drive.google.com/drive/folders/1hE8nc5wfGN0kCS44mlHzgg6-QP9CjUdz?usp=sharing)** *(Bao gồm đủ 4 file `.ttf` cho máy tính và 4 file `.cpfont` cho máy đọc sách)*.
 > - **Cài đặt sau khi tải:** Giải nén ➔ Người dùng Windows vào thư mục `windows/` nhấp đúp **`install.bat`**; người dùng macOS vào thư mục `macos/` nhấp đúp **`install.command`** là xong ngay!
 
