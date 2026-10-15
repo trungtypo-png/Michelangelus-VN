@@ -6,6 +6,7 @@
 *Việt hóa, tinh chỉnh glyph và đóng gói bởi **trungtypo**.*
 
 [![Support on Ko-fi](https://img.shields.io/badge/Ko--fi-trungtypo-ff5e5b?style=flat&logo=kofi&logoColor=white)](https://ko-fi.com/trungtypo)
+[![VietQR Donate](https://img.shields.io/badge/VietQR-Donate-005a3c?style=flat)](assets/vietqr.png)
 
 [Tiếng Việt](#tiếng-việt) · [English](#english)
 
@@ -179,16 +180,13 @@ Choose either of the two methods below:
 Nếu bạn yêu thích font chữ Michelangelus VN và muốn ủng hộ các dự án typography tiếp theo:
 
 <a href="https://ko-fi.com/trungtypo" target="_blank"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Buy Me a Coffee at ko-fi.com" height="34"></a>
+<a href="assets/vietqr.png"><img src="https://img.shields.io/badge/VietQR-Donate-005a3c?style=for-the-badge" alt="VietQR" height="34"></a>
 
 <details>
-<summary>☕ <b>Ủng hộ qua Vietcombank (VietQR)</b></summary>
+<summary>☕ <b>Quét mã VietQR</b></summary>
 <br>
 
-<img src="assets/vietqr.png" alt="Vietcombank QR" width="220" />
-
-- **Chủ tài khoản:** DINH TOAN TRUNG
-- **Số tài khoản:** `9346829005`
-- **Ngân hàng:** Vietcombank (VCB)
+<img src="assets/vietqr.png" alt="VietQR" width="250" />
 </details>
 
 ---
