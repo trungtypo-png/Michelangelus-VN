@@ -26,8 +26,15 @@ FONTS=(
 
 COUNT=0
 for FONT in "${FONTS[@]}"; do
+  SRC=""
   if [ -f "$FONT" ]; then
-    cp -f "$FONT" "$TARGET_DIR/"
+    SRC="$FONT"
+  elif [ -f "../$FONT" ]; then
+    SRC="../$FONT"
+  fi
+
+  if [ -n "$SRC" ]; then
+    cp -f "$SRC" "$TARGET_DIR/"
     echo "  [OK] Đã cài đặt: $FONT"
     COUNT=$((COUNT + 1))
   else

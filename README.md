@@ -9,9 +9,40 @@
 
 ---
 
-![Michelangelus VN — Chào nguyên xuân](Michelangelus-VN-poster-color.png)
+![Michelangelus VN — Chào nguyên xuân](assets/Michelangelus-VN-poster-color.png)
 
 *Poster giới thiệu font chữ Michelangelus VN (trình bày tác phẩm "Chào nguyên xuân" - Bùi Giáng).*
+
+---
+
+## 📁 Cấu trúc thư mục / Repository Structure
+
+```text
+Michelangelus-VN/
+├── windows/                     # 💻 Dành riêng cho Windows (1-Click)
+│   ├── install.bat              # Nhấp đúp để tự động cài font vào Windows
+│   ├── install.ps1              # Kịch bản PowerShell cài đặt & ghi Registry
+│   ├── uninstall.bat            # Nhấp đúp để gỡ font sạch sẽ khỏi Windows
+│   ├── uninstall.ps1            # Kịch bản PowerShell gỡ bỏ font
+│   └── README.txt               # Hướng dẫn nhanh cho Windows
+│
+├── macos/                       # 🍎 Dành riêng cho macOS (1-Click)
+│   ├── install.command          # Nhấp đúp để cài font vào ~/Library/Fonts
+│   ├── uninstall.command        # Nhấp đúp để gỡ font khỏi macOS
+│   └── README.txt               # Hướng dẫn nhanh cho macOS
+│
+├── assets/                      # 🎨 Poster, bảng chữ & hình nền máy đọc sách
+│   ├── Michelangelus-VN-poster-color.png
+│   ├── Michelangelus-VN-poster-BW.png
+│   ├── preview-Regular.png
+│   ├── Chao-nguyen-xuan-X3-BW.png
+│   └── Chao-nguyen-xuan-X3-BW.bmp
+│
+├── vietnamese_builder.py        # 🛠️ Script tự động vá & tạo 4 font tiếng Việt
+├── Michelangelus Fonts EULA.rtf  # 📄 Giấy phép bản quyền font gốc Microsoft
+├── README.md                    # 📖 Tài liệu hướng dẫn sử dụng
+└── SHA256SUMS.txt               # 🔒 Bảng mã băm kiểm tra tính toàn vẹn
+```
 
 ---
 
@@ -23,7 +54,7 @@
 
 - **Cam kết của repository:** Kho lưu trữ này tuân thủ tuyệt đối bản quyền: **KHÔNG lưu trữ và KHÔNG phân phối trực tiếp bất kỳ file font nhị phân có bản quyền nào (`.ttf`, `.cpfont`)**.
 - **Mục đích:** Dự án phi thương mại (non-commercial), phục vụ mục đích nghiên cứu typography, học tập cá nhân và thưởng thức văn học tiếng Việt trên máy tính và máy đọc sách e-ink.
-- **Giải pháp Tự làm (DIY Builder):** Chúng tôi cung cấp mã nguồn [`vietnamese_builder.py`](vietnamese_builder.py) để người dùng tự động vá dấu tiếng Việt vào font gốc tải hợp pháp từ Microsoft, cùng các kịch bản 1-click để cài đặt nhanh lên Windows và macOS.
+- **Giải pháp Tự làm (DIY Builder):** Chúng tôi cung cấp mã nguồn [`vietnamese_builder.py`](vietnamese_builder.py) để người dùng tự động vá dấu tiếng Việt vào font gốc tải hợp pháp từ Microsoft, cùng các kịch bản 1-click trong thư mục `windows/` và `macos/` để cài đặt nhanh chóng.
 
 ---
 
@@ -38,14 +69,14 @@ Michelangelus VN là dự án bổ sung toàn diện hệ thống dấu tiếng 
 - **Sửa lỗi ký tự Đ / đ**: Thay thế lỗi gán dấu caron (`Dcaron / dcaron`) của bản gốc bằng nét gạch ngang thân chuẩn mực.
 - **Dấu tham chiếu nguồn mở**: Sử dụng dấu serif từ **EB Garamond** (giấy phép mở SIL Open Font License).
 
-![Xem trước bảng chữ](preview-Regular.png)
+![Xem trước bảng chữ](assets/preview-Regular.png)
 
 ---
 
 ### Quy trình Tự Việt hóa & Cài đặt (3 Bước)
 
 ```
-[1. Tải font gốc Microsoft] ──> [2. Chạy vietnamese_builder.py] ──> [3. Nhấp đúp cài đặt 1-Click]
+[1. Tải font gốc Microsoft] ──> [2. Chạy vietnamese_builder.py] ──> [3. Chạy file cài đặt trong windows/ hoặc macos/]
 ```
 
 #### Bước 1: Tải bộ font gốc chính thức từ Microsoft
@@ -62,7 +93,7 @@ Yêu cầu máy đã cài Python 3. Cài các thư viện xử lý font cần th
 ```bash
 pip install fonttools freetype-py pillow numpy
 ```
-Chạy script:
+Chạy script tại thư mục gốc:
 ```bash
 python vietnamese_builder.py
 ```
@@ -74,20 +105,20 @@ Script sẽ tự động tải dấu tham chiếu EB Garamond (OFL), tính toán
 
 #### Bước 3: Cài đặt 1-Click lên máy tính
 
-| Hệ điều hành | Cách cài đặt | Cách gỡ bỏ |
-| :--- | :--- | :--- |
-| **Windows** 💻 | Nhấp đúp chuột vào **`install-windows.bat`** | Nhấp đúp chuột vào **`uninstall-windows.bat`** |
-| **macOS** 🍎 | Nhấp đúp chuột vào **`install-macos.command`** | Nhấp đúp chuột vào **`uninstall-macos.command`** |
+| Hệ điều hành | Thư mục | Cách cài đặt | Cách gỡ bỏ |
+| :--- | :--- | :--- | :--- |
+| **Windows** 💻 | `windows/` | Nhấp đúp chuột vào **`install.bat`** | Nhấp đúp chuột vào **`uninstall.bat`** |
+| **macOS** 🍎 | `macos/` | Nhấp đúp chuột vào **`install.command`** | Nhấp đúp chuột vào **`uninstall.command`** |
 
-- **Windows:** Tự động đăng ký cả 4 font vào Windows Registry, hỗ trợ cả User thường lẫn Admin, đồng thời kích hoạt phát tín hiệu cập nhật font cache của Windows để mở Word, Photoshop, trình duyệt... là có font dùng ngay.
-- **macOS:** Tự động sao chép font vào thư mục font cá nhân `~/Library/Fonts/`, dùng được ngay trong Pages, Word, Photoshop, Keynote...
+- **Windows:** Tự động đăng ký cả 4 font vào Windows Registry (hỗ trợ cả User thường lẫn Admin), đồng thời kích hoạt phát tín hiệu cập nhật font cache của Windows để mở Word, Photoshop, trình duyệt... là có font dùng ngay.
+- **macOS:** Tự động sao chép font vào thư mục font cá nhân `~/Library/Fonts/`, dùng được ngay trên toàn hệ thống (Pages, Word, Photoshop, Keynote...).
 
 ---
 
 ### Dành cho Máy đọc sách (E-readers & E-ink)
 - **Kindle, Kobo, Boox:** Sau khi tạo xong các file `Michelangelus-VN-*.ttf`, cắm cáp kết nối máy đọc sách với máy tính và chép file font vào thư mục `fonts` trên máy đọc sách.
 - **Thiết bị chạy XtOS (xteink firmware):** Sử dụng các công cụ tạo font bitmap hoặc converter để tạo file `.cpfont` từ file TTF đã Việt hóa.
-- **Hình nền e-ink nghệ thuật:** Repository cung cấp sẵn ảnh màn hình khóa e-ink 16 cấp độ xám tối ưu cho máy đọc sách: [`Chao-nguyen-xuan-X3-BW.png`](Chao-nguyen-xuan-X3-BW.png) và [`Chao-nguyen-xuan-X3-BW.bmp`](Chao-nguyen-xuan-X3-BW.bmp).
+- **Hình nền e-ink nghệ thuật:** Thư mục `assets/` cung cấp sẵn ảnh màn hình khóa e-ink 16 cấp độ xám tối ưu cho máy đọc sách: [`assets/Chao-nguyen-xuan-X3-BW.png`](assets/Chao-nguyen-xuan-X3-BW.png) và [`assets/Chao-nguyen-xuan-X3-BW.bmp`](assets/Chao-nguyen-xuan-X3-BW.bmp).
 
 ---
 
@@ -107,7 +138,7 @@ Michelangelus VN is a typography-grade Vietnamese adaptation of the **Michelange
 ### How to Build & Install (3 Simple Steps)
 
 ```
-[1. Download Original Font] ──> [2. Run vietnamese_builder.py] ──> [3. Double-Click 1-Click Installer]
+[1. Download Original Font] ──> [2. Run vietnamese_builder.py] ──> [3. Run installer in windows/ or macos/]
 ```
 
 #### Step 1: Download the official original font from Microsoft
@@ -124,7 +155,7 @@ Ensure you have Python 3 installed. Install dependencies:
 ```bash
 pip install fonttools freetype-py pillow numpy
 ```
-Run the builder script:
+Run the builder script in the root directory:
 ```bash
 python vietnamese_builder.py
 ```
@@ -136,10 +167,10 @@ The script will automatically retrieve reference diacritics from EB Garamond (OF
 
 #### Step 3: 1-Click Installation
 
-| Operating System | How to Install | How to Uninstall |
-| :--- | :--- | :--- |
-| **Windows** 💻 | Double-click **`install-windows.bat`** | Double-click **`uninstall-windows.bat`** |
-| **macOS** 🍎 | Double-click **`install-macos.command`** | Double-click **`uninstall-macos.command`** |
+| Operating System | Folder | How to Install | How to Uninstall |
+| :--- | :--- | :--- | :--- |
+| **Windows** 💻 | `windows/` | Double-click **`install.bat`** | Double-click **`uninstall.bat`** |
+| **macOS** 🍎 | `macos/` | Double-click **`install.command`** | Double-click **`uninstall.command`** |
 
 - **Windows:** Automatically copies fonts, writes registry entries (supports both Standard User and Administrator), and broadcasts a system-wide font change message so all apps pick up the font immediately.
 - **macOS:** Automatically installs the fonts into `~/Library/Fonts/` for instant access across all applications.
@@ -149,7 +180,7 @@ The script will automatically retrieve reference diacritics from EB Garamond (OF
 ### E-Reader & E-ink Usage
 - **Kindle, Kobo, Boox, etc.**: Copy the generated `Michelangelus-VN-*.ttf` files directly into your e-reader's `fonts` folder.
 - **XtOS (xteink devices)**: Use font conversion tools to generate `.cpfont` files from the built TTF fonts.
-- **Included artwork**: High-contrast, 16-level grayscale lockscreen wallpapers are included: [`Chao-nguyen-xuan-X3-BW.png`](Chao-nguyen-xuan-X3-BW.png) and [`Chao-nguyen-xuan-X3-BW.bmp`](Chao-nguyen-xuan-X3-BW.bmp).
+- **Included artwork**: High-contrast, 16-level grayscale lockscreen wallpapers are available in `assets/`: [`assets/Chao-nguyen-xuan-X3-BW.png`](assets/Chao-nguyen-xuan-X3-BW.png) and [`assets/Chao-nguyen-xuan-X3-BW.bmp`](assets/Chao-nguyen-xuan-X3-BW.bmp).
 
 ---
 

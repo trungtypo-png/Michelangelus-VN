@@ -34,10 +34,19 @@ if ($isAdmin) {
 Write-Host "[*] Thư mục đích: $targetDir" -ForegroundColor DarkGray
 Write-Host ""
 
+$searchDirs = @($scriptDir, (Split-Path -Parent $scriptDir))
+
 $installed = 0
 foreach ($item in $fonts) {
-    $srcPath = Join-Path $scriptDir $item.File
-    if (Test-Path $srcPath) {
+    $srcPath = $null
+    foreach ($d in $searchDirs) {
+        $candidate = Join-Path $d $item.File
+        if (Test-Path $candidate) {
+            $srcPath = $candidate
+            break
+        }
+    }
+    if ($srcPath) {
         $destPath = Join-Path $targetDir $item.File
         
         $copied = $false
