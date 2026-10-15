@@ -5,7 +5,9 @@
 
 [English](#english) · [Tiếng Việt](#tiếng-việt)
 
-![Michelangelus VN Regular — desktop preview / bản xem trước trên máy tính](preview-Regular.png)
+![Michelangelus VN — Chào nguyên xuân](Michelangelus-VN-poster-color.png)
+
+[Desktop glyph preview / Xem bảng chữ trên máy tính](preview-Regular.png)
 
 ## English
 
@@ -30,6 +32,15 @@ Use **Code → Download ZIP** to download the whole repository, or open a file b
 | CP · .cpfont | [12](Michelangelus-vn_12.cpfont), [14](Michelangelus-vn_14.cpfont), [16](Michelangelus-vn_16.cpfont), [18](Michelangelus-vn_18.cpfont) | E-readers running firmware that supports .cpfont |
 
 Install the TTF files through your operating system's font manager. For CP files, follow the font-installation instructions for your e-reader's firmware; these are not desktop TTF files. The CP files are supplied as provided and have not been verified on a physical e-reader in this release.
+
+### Posters and wallpapers
+
+Vietnamese typography specimens featuring two opening lines from **Chào nguyên xuân — Bùi Giáng**, with the four actual Michelangelus VN 2.010 styles.
+
+- 1800 × 1800 posters: [Color](Michelangelus-VN-poster-color.png) · [Black-and-white dither](Michelangelus-VN-poster-BW.png).
+- 528 × 792 portrait wallpaper: [1-bit PNG](Chao-nguyen-xuan-X3-BW.png) · [8-bit BMP containing black and white only](Chao-nguyen-xuan-X3-BW.bmp).
+
+The architectural illustration is AI-generated; the text uses the actual font files rendered with HarfBuzz + FreeType. Floyd–Steinberg dithering uses the processing code supplied with X3 Wallpaper Maker. Desktop previews were checked; these wallpapers have not been tested on a physical device. Poetry excerpt source: [Tuổi Trẻ — Chào nguyên xuân](https://tuoitre.vn/chao-nguyen-xuan-16928.htm).
 
 ### Status
 
@@ -61,8 +72,17 @@ Chọn **Code → Download ZIP** để tải toàn bộ, hoặc mở từng file
 
 Cài file TTF bằng trình quản lý font của hệ điều hành. Với bản CP, làm theo hướng dẫn cài font của firmware trên máy đọc sách; không cài file .cpfont như TTF trên máy tính. Các file CP được giữ nguyên từ bộ đã cung cấp, chưa kiểm tra trực tiếp trên máy đọc sách trong lần phát hành này.
 
+### Poster và hình nền
+
+Bản mẫu chữ tiếng Việt dùng hai câu mở đầu **Chào nguyên xuân — Bùi Giáng**, trình bày bằng bốn kiểu font Michelangelus VN 2.010 thật.
+
+- Poster 1800 × 1800: [Bản màu](Michelangelus-VN-poster-color.png) · [Đen trắng dither](Michelangelus-VN-poster-BW.png).
+- Hình nền dọc 528 × 792: [PNG 1-bit](Chao-nguyen-xuan-X3-BW.png) · [BMP 8-bit chỉ chứa hai màu đen trắng](Chao-nguyen-xuan-X3-BW.bmp).
+
+Minh họa kiến trúc tạo bằng AI; phần chữ render từ file font thật bằng HarfBuzz + FreeType. Hiệu ứng Floyd–Steinberg dither dùng mã xử lý đi kèm X3 Wallpaper Maker. Đã kiểm tra ảnh trên máy tính, chưa thử trực tiếp trên thiết bị. Nguồn trích thơ: [Tuổi Trẻ — Chào nguyên xuân](https://tuoitre.vn/chao-nguyen-xuan-16928.htm).
+
 ### Tình trạng
 
 Đây là **bản Việt hóa nhanh**, đã chỉnh dấu tiếng Việt, điểm nối râu ơ/ư, khoảng cách chữ và kerning. Cả bốn kiểu TTF đã được kiểm tra render trên máy tính bằng HarfBuzz + FreeType, gồm văn bản NFC/NFD. Font TTF vẫn thiếu ký hiệu tiền đồng **₫ (U+20AB)**; chữ **đ/Đ** đầy đủ. Một số ứng dụng hoặc tổ hợp chữ vẫn có thể cần tinh chỉnh thêm.
 
-Nếu gặp lỗi, vui lòng tạo issue kèm kiểu font, đoạn chữ, ứng dụng đang dùng và ảnh chụp. Mã kiểm tra SHA-256 nằm trong [SHA256SUMS.txt](SHA256SUMS.txt).
+Nếu gặp lỗi, vui lòng tạo issue kèm kiểu font, đoạn chữ, ứng dụng đang dùng và ảnh chụp. Mã kiểm tra SHA-256 nằm trong [SHA256SUMS.txt](SHA256SUMS.txt).
