@@ -1,0 +1,13 @@
+# Font binaries (prohibited by Microsoft EULA)
+*.ttf
+*.otf
+*.cpfont
+original/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# OS metadata
+.DS_Store
+Thumbs.db

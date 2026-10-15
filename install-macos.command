@@ -42,7 +42,9 @@ if [ $COUNT -eq 4 ]; then
 elif [ $COUNT -gt 0 ]; then
   echo "⚠️ Đã cài đặt $COUNT/4 font vào $TARGET_DIR."
 else
-  echo "❌ [LỖI] Không tìm thấy file font .ttf nào trong thư mục này."
+  echo "❌ [NHẮC NHỞ] Không tìm thấy các file font Michelangelus-VN-*.ttf nào trong thư mục này."
+  echo "👉 Vui lòng chạy 'python vietnamese_builder.py' trước để tạo bộ font từ nguồn gốc Microsoft."
+  echo "   Xem chi tiết hướng dẫn tại README.md"
 fi
 
 echo ""

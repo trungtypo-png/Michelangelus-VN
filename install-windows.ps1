@@ -1,4 +1,4 @@
-﻿
+
 # Michelangelus VN - Windows Font Installer
 $ErrorActionPreference = 'Stop'
 
@@ -88,5 +88,7 @@ if ($installed -eq $fonts.Count) {
 } elseif ($installed -gt 0) {
     Write-Host "[HOÀN TẤT] Đã cài đặt $installed font vào hệ thống." -ForegroundColor Yellow
 } else {
-    Write-Host "[LỖI] Không cài đặt được font nào. Vui lòng kiểm tra lại file .ttf trong thư mục." -ForegroundColor Red
+    Write-Host "[NHẮC NHỞ] Chưa tìm thấy các file font Michelangelus-VN-*.ttf." -ForegroundColor Red
+    Write-Host "Vui lòng chạy 'python vietnamese_builder.py' trước để tạo bộ font từ nguồn gốc Microsoft." -ForegroundColor Yellow
+    Write-Host "Xem chi tiết hướng dẫn tại README.md" -ForegroundColor Cyan
 }

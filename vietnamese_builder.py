@@ -183,6 +183,13 @@ def process_single_font(cfg):
     print(f"Processing: {cfg['src']} -> {cfg['dst']}")
     print(f"Reference: {cfg['ref_font']} ({cfg['ref_axis']})")
     
+    if not os.path.exists(src_path):
+        print(f"\n[ERROR] Source font not found: {src_path}")
+        print("Please download the original Michelangelus fonts from Microsoft:")
+        print("  https://www.microsoft.com/en-us/download/details.aspx?id=108856")
+        print("and extract the 4 TTF files into this directory or an 'original/' folder.")
+        sys.exit(1)
+
     tt = TTFont(src_path)
     glyf = tt["glyf"]
     hmtx = tt["hmtx"]

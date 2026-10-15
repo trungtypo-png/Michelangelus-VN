@@ -1,0 +1,7 @@
+# Enforce LF for macOS shell scripts
+*.command text eol=lf
+*.sh text eol=lf
+
+# Enforce CRLF for Windows scripts
+*.bat text eol=crlf
+*.ps1 text eol=crlf
